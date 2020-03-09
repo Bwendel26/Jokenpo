@@ -2,13 +2,14 @@ from gameSet import gameSet
 from gradeJogo import criaGrade
 from random import randint
 from time import sleep #intervalo de decisao
+from aindaJoga import aindaJoga
 
 def pensar():
 # TIMER
    def frasePensar():
       print("Pc esta pensando...")
 
-   secs = randint(1, 2)
+   secs = randint(2, 3)
    while (secs > 0):
       frasePensar()
       sleep(1)
@@ -33,16 +34,13 @@ coordenadasGrade = { # posicoes do game: coordenadas na grade (eixo x, eixo y)
                      9: (esp + 15, 10)
                      }
 
-def aindaJoga(): #Analisar se e possivel jogar ainda ou o game acabou
-   return True
-
 #Logica da jogada 1
-def primeiraJogada(coordenadas):
-   jogadas = ()
+def jogada(coordenadas):
+   jogadas = [""]
    """Tupla que n aceita repeticao,
    ajudando na logica de nao poder
    sobreescrever uma jogada ja feita."""
-   if(len(jogadas) == 0):
+   if(len(jogadas) == 1):
       # Nivel de analise de modo de jogo1
       if (len(playerData) == 2):
          iniciante = playerData[1]
@@ -62,12 +60,15 @@ def primeiraJogada(coordenadas):
          jogada1 = input("{} qual a sua jogada (1 a 9)?: ".format(iniciante))
       
       jogadas[0] = jogada1
-   
-   else:
-      while(aindaJoga == True):
-         return 0
 
-# primeiraJogada(coordenadasGrade) #teste
+      return print(jogadas)
+   
+   elif(len(jogadas > 1)):
+      while(aindaJoga() == True):
+         return 0
+         
+
+jogada(coordenadasGrade) #teste
 ################################
 
 #Fazer a logica de chamada da func jogada analisando a grade.
