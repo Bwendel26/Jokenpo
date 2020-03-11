@@ -9,3 +9,10 @@ Um jogo da velha em python.
 ps: nenhum código foi copiado para esta aplicação...
 
 - Bibliotecas utilizadas: random, time... 
+
+- Editor de texto: Vscode
+  - Extensões: * python
+               * coderunner
+               * POWERMODE
+               * 2077 theme
+               * Git Blame
