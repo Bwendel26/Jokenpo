@@ -23,6 +23,7 @@ playerData = gameSet()
 #Logica da jogada 1
 def jogada(coordenadas):
    jogadas = [""]
+   qtdJogadas = 0
    """Tupla que n aceita repeticao,
    ajudando na logica de nao poder
    sobreescrever uma jogada ja feita."""
@@ -46,9 +47,8 @@ def jogada(coordenadas):
          jogada1 = input("{} qual a sua jogada (1 a 9)?: ".format(iniciante))
       
       jogadas[0] = jogada1
-
-      return print(jogadas)
+      qtdJogadas += 1
    
    elif(len(jogadas > 1)):
-      while(aindaJoga() == True):
-         return 0
+      if (aindaJoga()): #MEXER AQUI ##############
+         return""

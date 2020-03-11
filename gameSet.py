@@ -1,16 +1,14 @@
 from random import randint
 from time import sleep #intervalo de decisao
 
+print("Bem vindo ao jogo da velha!")
+modoDeJogo = input("1 jogador ou 2? ")
+str(modoDeJogo)
+
 def gameSet():
   """
-  Funcao que seta o modo de jogo,
-  o(s) player(s), e decide quem inicia
-  jogando.
+  Funcao que decide quem inicia jogando.
   """
-
-  print("Bem vindo ao jogo da velha!")
-  modoDeJogo = input("1 jogador ou 2? ")
-  str(modoDeJogo)
 
   if(modoDeJogo == "2"):
     jogador1 = input("Quem e o jogador 1: ")
