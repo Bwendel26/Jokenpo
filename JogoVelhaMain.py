@@ -15,7 +15,7 @@ coordenadasGrade = { # posicoes do game: coordenadas na grade (eixo x, eixo y)
                      }
 
 
-jogada(coordenadasGrade) #teste
+jogada(coordenadasGrade)
 ################################
 
 #Fazer a logica de chamada da func jogada analisando a grade.

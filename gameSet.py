@@ -10,13 +10,17 @@ def gameSet():
   Funcao que decide quem inicia jogando.
   """
 
-  if(modoDeJogo == "2"):
+  if(modoDeJogo == "1"):
+    jogador1 = input("Digite seu nome: ")
+  elif(modoDeJogo == "2"):
     jogador1 = input("Quem e o jogador 1: ")
     jogador2 = input("Quem e o jogador 2: ")
   else:
-    jogador1 = input("Digite seu nome: ")
+    print("Erro!")
+    return ValueError
 
   print("Vamos ver quem vai comecar...")
+
   # TIMER
   def foo():
     print("processando...")
@@ -41,6 +45,8 @@ def gameSet():
       quemComeca = jogador1 # player1 inicia jogando
     elif (quemComeca == 2):
       quemComeca = jogador2 #player2 inicia jogando
+    else: 
+      print("Input Erro!")
 
   print("{} vai comecar o game!".format(quemComeca))
 
@@ -49,3 +55,5 @@ def gameSet():
     return [ jogador1, quemComeca ]
   elif (modoDeJogo == "2"):
     return [ jogador1, jogador2, quemComeca ]
+  else:
+    return ""
